@@ -1,0 +1,189 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.navbar {
+    background-color: #007BFF;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+}
+
+.nav-items li {
+    margin-left: 1rem; /* Reduced margin for smaller spacing */
+}
+
+.nav-items a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-items a:hover {
+    color: #FFD700; /* Gold */
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 1.5rem; /* Reduced padding for a smaller look */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 1rem; /* Reduced margin for more compact layout */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Total Counts Section */
+.total-counts {
+    margin-bottom: 1rem; /* Adjusted margin */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.total-counts p {
+    flex: 1 1 48%; /* Flex item takes 48% of the width */
+    background-color: #e9ecef;
+    padding: 0.5rem; /* Further reduced padding */
+    border-radius: 5px;
+    margin: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem; /* Smaller font size */
+}
+
+/* Seller Applicants Section */
+.seller-list-container {
+    margin-top: 1.5rem; /* Reduced space between navbar and seller applicants */
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light background for distinction */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.5rem; /* Further reduced padding for a smaller table */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    font-size: 0.9rem; /* Smaller font size for headers */
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem; /* Space between buttons */
+}
+
+.accept-button, .reject-button {
+    padding: 0.5rem 0.75rem; /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem; /* Smaller font size for buttons */
+}
+
+.accept-button {
+    background-color: #28a745; /* Green for accept */
+}
+
+.reject-button {
+    background-color: #dc3545; /* Red for reject */
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Adjusted margin for centering */
+    padding: 15px; /* Reduced padding */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-items {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-items li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .total-counts p {
+        flex: 1 1 100%; /* Take full width on smaller screens */
+    }
+}
